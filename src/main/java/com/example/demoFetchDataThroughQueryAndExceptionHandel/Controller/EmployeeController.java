@@ -21,6 +21,13 @@ public class EmployeeController {
     @Autowired
     private EmployeeService employeeService;
 
+    //new security login part add
+    @GetMapping("/login")
+    private String home()
+    {
+        return ("<h1>WELCOME</h1>");
+
+    }
     // Using Exception Handling
     @PostMapping("/storeData")
     public Response saveData(@RequestBody EmployeeEntity employee){
